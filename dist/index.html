@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/686463c8ce.js" crossorigin="anonymous"></script>
+    <script src="./jquery/dist/jquery.js"> </script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script type></script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="chooseCity" id="chooseCity" placeholder="Enter City Of Your Choice!">
+    <button class="search" >GET City Weather</button>
+    <div class="container"></div>
+    <script id="weather-template" type="text/x-handlebars-template">
+        <div class="city">
+            <div class="name">{{this.name}}</div>
+            <div class="temperature">{{this.temperature}}</div>
+            <div class="condition">{{this.condition}}</div>
+            <img class="icon" src={{this.conditionPic}} alt="Weather Icon">
+            <button class="removeCity" >Remove City </button>
+            <button class="addCity">Add City </button>
+        </div>
+    </script>
+    
+    <script src="City.js"></script>
+    <script src="weatherDisplay.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
