@@ -20,19 +20,17 @@ class Controller{
             this.handleSearch(cityName)
         })
 
-        $(".container").on("click",".addCity", async function() {
+        $(".cities").on("click",".fa-plus", async function() {
             let cityName = $(this).closest(".city").find(".name").html()
             await controller.cityData.saveCity(cityName)
             $(".city").remove()
             controller.loadPage()
-            alert("data Saved!")
         })
-        $(".container").on("click",".removeCity", async function() {
-            let cityName = $(this).closest("div").find(".name").html()
+        $(".cities").on("click",".fa-trash", async function() {
+            let cityName = $(this).closest("div").siblings(".name").html()
             await controller.cityData.removeCity(cityName)
             $(".city").remove()
             controller.loadPage()
-            alert("data removed!")
         })
 
     }

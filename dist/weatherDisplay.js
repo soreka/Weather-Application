@@ -7,7 +7,7 @@ class WeatherDisplay{
         $(".city").remove()
         for(let city of cities){
             let newCities =this.weatherTemplate(city)
-            $(".container").append(newCities) 
+            $(".cities").append(newCities) 
         }
     }
 

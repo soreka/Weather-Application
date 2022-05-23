@@ -8,14 +8,41 @@
     <script src="https://kit.fontawesome.com/686463c8ce.js" crossorigin="anonymous"></script>
     <script src="./jquery/dist/jquery.js"> </script>
     <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="https://kit.fontawesome.com/686463c8ce.js" crossorigin="anonymous"></script>
     <script type></script>
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="chooseCity" id="chooseCity" placeholder="Enter City Of Your Choice!">
-    <button class="search" >GET City Weather</button>
-    <div class="container"></div>
+ 
+    <div class="container">
+        <div class="Header">
+            <div class="appName">WeaTheRia</div>
+         </div>
+        <div class="serchBar">
+            <div class="searchWrapper">
+                <div class=></div>
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" name="chooseCity" id="chooseCity" placeholder="Enter City Of Your Choice!">
+            </div>
+            <div class="searchButton">
+                <button class="search" >GET City Weather</button>
+            </div>
+        </div>
+        <div class="cities"></div>
+    </div>
+    
     <script id="weather-template" type="text/x-handlebars-template">
+        <div class="city">
+            <div class="removeCity" ><i class="fa-solid fa-trash"></i></div>
+            <div class="addCity"><i class="fa-solid fa-plus"></i> </div>
+            <div class="name">{{this.name}}</div>
+            <div class="temperature">{{this.temperature}}&deg;</div>
+            <div class="celziosIcon"></div>
+            <img class="conditionPic" src={{this.conditionPic}} alt="Weather Icon">
+            <i class="fa-solid fa-cloud"></i>
+        </div>
+    </script>
+    <script id="weather-template22" type="text/x-handlebars-template">
         <div class="city">
             <div class="name">{{this.name}}</div>
             <div class="temperature">{{this.temperature}}</div>
@@ -31,3 +58,23 @@
     <script src="controller.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="Header">
+    <div class="appName"></div>
+  </div>
+</div>

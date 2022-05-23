@@ -1,43 +1,138 @@
-.container {  display: grid;
+/* Style for placments position and structure */
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+.container {  
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 0.2fr 1.8fr;
+    grid-template-rows: 14.4% 8.1% 77.5%;
+    grid-auto-rows: 1fr;
+    background-color: #b3e0ff;
     gap: 0px 0px;
     grid-auto-flow: row;
+    justify-content: stretch;
+    align-content: start;
     grid-template-areas:
       "Header"
       "serchBar"
       "cities";
   }
   
-  .Header { grid-area: Header; }
+ 
   
-  .serchBar { grid-area: serchBar; }
-  
-  .cities { grid-area: cities; }
-  
-  
-  html, body , .container {
-    height: 100%;
-    margin: 0;
-  }
-  
-  /* For presentation only, no need to copy the code below */
-  
-  .container * {
-    border: 1px solid red;
-    position: relative;
-  }
-  
-  .container *:after {
-    content:attr(class);
-    position: absolute;
-    top: 0;
-    left: 0;
+  .serchBar {  display: grid;
+    grid-template-columns: 1.6fr 0.4fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    
+    justify-content: stretch;
+    justify-items: stretch;
+    grid-template-areas:
+      "searchbar searchButton";
+    grid-area: serchBar;
     width: 100%;
-    height: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+  }
+  .chooseCity{
+      align-self: center;
+      justify-self: center;
+      width: 100%;
+      height: 100%;
+  }
+  .searchWrapper {
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    border-radius: 12%;
+    grid-area: searchbar;
+    width: 100%;
   }
   
+  .searchButton {
+    grid-area: searchButton;
+    width: 100%;
+  }
   
+  .cities {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: auto;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    align-content: space-around;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+      ".";
+    justify-self: stretch;
+    align-self: start;
+    grid-area: cities;
+  }
+  
+  .city {  display: grid;
+    grid-template-columns: 1fr 1.1fr 0.9fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    background-color: #007acc;
+    grid-template-areas:
+      ". name name ."
+      ". temperature celziosIcon ."
+      ". temperature . addCity"
+      "conditionPic conditionPic conditionPic removeCity";
+  }
+  
+  .addCity { grid-area: addCity; }
+  
+  .removeCity { grid-area: removeCity; }
+  
+  .name { grid-area: name; }
+  
+  .temperature {
+       grid-area: temperature;
+       font-size: xx-large;
+     }
+  
+  .celziosIcon { grid-area: celziosIcon; }
+  
+  .conditionPic { grid-area: conditionPic; }
+  
+
+
+
+  /* style for coloring  */
+.appName {
+    font-size: xx-large;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(206,89,55,0);
+    color:  #5d8d91;
+    align-self: center;
+    background: #12bdb5;
+    }
+
+.name{
+    justify-self: center;
+    font-size: xx-large;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c, 2px 2px 2px rgba(206,89,55,0);
+    color: #192065;
+    background: #99C1C0;
+}
+
+     
+
+.Header {  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    background-color: ;
+    grid-template-areas:
+        ". appName .";
+    grid-area: Header;
+}
+      
+.appName { grid-area: appName; }
+      
+
+
+/* animated background */
